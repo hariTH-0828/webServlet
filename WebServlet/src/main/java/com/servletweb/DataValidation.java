@@ -1,35 +1,31 @@
 package com.servletweb;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.xml.crypto.Data;
+
 public class DataValidation {
 
 	public static boolean validate(String userid, String password) {
-		boolean status = false;
-		
+		String uid = null, pass = null, res = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb","root","root");
-			String uid = userid;
-			String pass = password;
-			String query = "select * from studentlogin where ID=? and password=?";
+			uid = userid;
+			pass = password;
+			String query = "select * from studentlogin where ID=?";
 			PreparedStatement st = con.prepareStatement(query);
 			st.setString(1, uid);
-			st.setString(2, pass);
-			
 			ResultSet rs = st.executeQuery();
-			status = rs.next();
+			rs.next();
+			res = rs.getString("password");
 		}catch (Exception e) {
 			System.out.println(e);
 		}
-		return status;
+		if(pass.equals(res)) {
+			return true;
+		}else return false;
 	}
-	public static void main(String[] args) {
-		System.out.println(validate("1902005", "theebika"));
-
-	}
-
 }

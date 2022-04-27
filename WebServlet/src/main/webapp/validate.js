@@ -1,26 +1,17 @@
 function validate(){
 
-	var userid = document.getElementsByName("userid");
-	var password = document.getElementsByName("password");
+	var userid = document.getElementById("userid");
+	var password = document.getElementById("password");
 	
 	if(userid == "" || password == ""){
-		alert("values cannot be Empty");
+		alert("Student ID or Password can't leave as Blank'");
 		return false;
-	}else if(userid == "admin" || password == "admin"){
-		alert("Hey user, don't set username or password as admin'");
+	}else if(!parseInt(userid)){
+		alert("Student ID must only be in Integer");
 		return false;
-	}
-	
+	}else if(password.length < 8){
+		alert("Password must be greater than 8 characters");
+		return false;
+	}else return true;
 
-
-	/*if(document.form.userid.value == "" || document.form.password.value == ""){
-		alert("userid or password can't leave as Empty");
-		return false;
-	}else if(document.form.userid.value == "admin" || document.form.password.value == "admin"){
-		alert("Hey user, Don't set username or password as admin");
-		return false;
-	}else if(document.form.password.value < 6){
-		alert("Password must be greater than 8 character");
-		return false;
-	}else return true;*/
 }
