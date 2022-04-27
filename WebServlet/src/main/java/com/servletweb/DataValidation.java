@@ -1,5 +1,4 @@
 package com.servletweb;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -9,7 +8,7 @@ public class DataValidation {
 
 	public static boolean validate(String userid, String password) {
 		boolean status = false;
-		
+		System.out.println(userid+" "+password);
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb","root","root");
@@ -25,11 +24,8 @@ public class DataValidation {
 		}catch (Exception e) {
 			System.out.println(e);
 		}
-		return status;
+		if(status) {
+			return true;
+		}else return false;
 	}
-	public static void main(String[] args) {
-		System.out.println(validate("1902005", "theebika"));
-
-	}
-
 }

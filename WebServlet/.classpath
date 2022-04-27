@@ -8,13 +8,14 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v10.0">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/sarav/eclipse-workspace/studentDB/src/main/java/jakarta.servlet-api-5.0.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sarav/eclipse-workspace/studentDB/src/main/java/com.mysql.jdbc_5.1.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sarav/eclipse-workspace/studentDB/src/main/java/mysql-connector-java-8.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sarav/git/WebServlet/WebServlet/lib/com.mysql.jdbc.Driver.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sarav/git/WebServlet/WebServlet/lib/jakarta.servlet-api-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sarav/git/WebServlet/WebServlet/lib/mysql-connector-java-8.0.27.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
