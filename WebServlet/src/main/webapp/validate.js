@@ -14,5 +14,4 @@ function validate(){
 		alert("Password must be greater than 8 characters");
 		return false;
 	}else return true;
-
 }
