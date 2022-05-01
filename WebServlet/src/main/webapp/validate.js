@@ -1,10 +1,11 @@
 function validate(){
 
-	var userid = document.getElementById("userid");
-	var password = document.getElementById("password");
+	var userid = document.form.userid.value;
+	var pass = document.form.password.value;
 	
-	if(userid == "" || password == ""){
-		alert("Student ID or Password can't leave as Blank'");
+	console.log(userid +" "+ pass);
+	if(userid == "" || pass == ""){
+		alert("Student ID or Password can't leave as Blank");
 		return false;
 	}else if(!parseInt(userid)){
 		alert("Student ID must only be in Integer");
